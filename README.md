@@ -1,2 +1,2 @@
 # DHBW-ProgrammingTasks
-Repository for tasks given during the "Programmieren"-lecture at the DHBW Karlsruhe
+Repository for tasks given during the "Programmieren"-lecture at DHBW Karlsruhe
