@@ -9,14 +9,14 @@ public class DancingText extends JFrame implements Runnable {
     private int abstand = 5;
 
     private JLabel[] letterLabel = new JLabel[11];
-    private String[] letters = {"D","A","N","C","I","N","G","T","E","X","T"};
+    private String[] letters = {"D", "A", "N", "C", "I", "N", "G", "T", "E", "X", "T"};
 
     Random rand = new Random();
 
     public DancingText() {
         this.setTitle("Dancing Text");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLayout(new GridLayout(0,letterLabel.length, abstand, abstand));
+        this.setLayout(new GridLayout(0, letterLabel.length, abstand, abstand));
         this.setSize(350, 100);
         this.setLocationRelativeTo(null);
 
@@ -39,19 +39,19 @@ public class DancingText extends JFrame implements Runnable {
         }
     }
 
-    private void changeText(){
+    private void changeText() {
         Random randAlignment = new Random();
         for (int i = 0; i < letterLabel.length; i++) {
-            int r  = rand.nextInt(256);
+            int r = rand.nextInt(256);
             int b = rand.nextInt(256);
             int g = rand.nextInt(256);
-            letterLabel[i].setForeground(new Color(r,b,g));
+            letterLabel[i].setForeground(new Color(r, b, g));
             int x = rand.nextInt(10);
-            if(x < 5){
+            if (x < 5) {
                 letterLabel[i].setVerticalAlignment(JLabel.TOP);
-            } else if (x>8){
+            } else if (x > 8) {
                 letterLabel[i].setVerticalAlignment(JLabel.CENTER);
-            }else {
+            } else {
                 letterLabel[i].setVerticalAlignment(JLabel.BOTTOM);
             }
         }
@@ -60,7 +60,7 @@ public class DancingText extends JFrame implements Runnable {
 
     @Override
     public void run() {
-        while(true){
+        while (true) {
             changeText();
             try {
                 Thread.sleep(80);
