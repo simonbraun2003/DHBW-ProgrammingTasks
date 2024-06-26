@@ -49,10 +49,15 @@ public class DancingText extends JFrame implements Runnable {
             int x = rand.nextInt(10);
             if (x < 5) {
                 letterLabel[i].setVerticalAlignment(JLabel.TOP);
+                letterLabel[i].setFont(new Font("Arial", Font.BOLD, 17));
             } else if (x > 8) {
                 letterLabel[i].setVerticalAlignment(JLabel.CENTER);
+                letterLabel[i].setFont(new Font("Plain", Font.ITALIC, 12));
+
             } else {
-                letterLabel[i].setVerticalAlignment(JLabel.BOTTOM);
+                //letterLabel[i].setVerticalAlignment(JLabel.BOTTOM);
+                letterLabel[i].setFont(new Font("Monospaced", Font.PLAIN, 15));
+
             }
         }
     }
@@ -63,7 +68,7 @@ public class DancingText extends JFrame implements Runnable {
         while (true) {
             changeText();
             try {
-                Thread.sleep(80);
+                Thread.sleep(200);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
