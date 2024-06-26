@@ -46,11 +46,11 @@ public class DancingText extends JFrame implements Runnable {
             int b = rand.nextInt(256);
             int g = rand.nextInt(256);
             letterLabel[i].setForeground(new Color(r, b, g));
-            int x = rand.nextInt(10);
+            int x = rand.nextInt(12);
             if (x < 5) {
                 letterLabel[i].setVerticalAlignment(JLabel.TOP);
                 letterLabel[i].setFont(new Font("Arial", Font.BOLD, 17));
-            } else if (x > 8) {
+            } else if (x > 9) {
                 letterLabel[i].setVerticalAlignment(JLabel.CENTER);
                 letterLabel[i].setFont(new Font("Plain", Font.ITALIC, 12));
 
