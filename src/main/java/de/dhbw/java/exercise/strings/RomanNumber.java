@@ -2,7 +2,7 @@ package de.dhbw.java.exercise.strings;
 
 import java.util.Scanner;
 
-public class RomanNumber { //ToDo: AUS DEN LÖSUNGEN KOPIERT!!
+public class RomanNumber { //Info: AUS DEN LÖSUNGEN KOPIERT!!
     private static int getValue(char c) {
         switch (Character.toUpperCase(c)) {
             case 'I' : return 1;

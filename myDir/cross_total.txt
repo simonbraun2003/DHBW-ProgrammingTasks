@@ -1,0 +1,2 @@
+Quersumme von 17 ist 8
+Quersumme von 234 ist 9
