@@ -1,6 +1,5 @@
 package de.dhbw.java.exercise.control;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class AddUp {
@@ -12,7 +11,7 @@ public class AddUp {
             sum += input;
             System.out.print("Zahl eingeben (<0 für Abbruch): ");
             input = scan.nextInt();
-        };
+        }
         System.out.println("Summe: "+sum);
         scan.close();
     }

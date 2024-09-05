@@ -1,6 +1,5 @@
 package de.dhbw.java.exercise.control;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class NumberGuess {
