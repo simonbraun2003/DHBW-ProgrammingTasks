@@ -1,6 +1,6 @@
-package de.dhbw.java.exercise.classes.vehicles;
+package de.dhbw.java.exercise.classes.abstr.vehicles;
 
-public class Race {
+public class Race { //ToDo: Aufgabenstellung nicht ganz klar da toString geforderte Methode ja schon erfüllt
     public static void main(String[] args) {
         Vehicle[] vehicles = new Vehicle[4];
         vehicles[0] = new Bicycle(20.0);

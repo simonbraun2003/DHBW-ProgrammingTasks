@@ -1,4 +1,4 @@
-package de.dhbw.java.exercise.classes.vehicles;
+package de.dhbw.java.exercise.classes.abstr.vehicles;
 
 public class Vehicle {
     int wheel = 0;

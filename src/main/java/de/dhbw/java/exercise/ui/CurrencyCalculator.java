@@ -20,8 +20,8 @@ public class CurrencyCalculator {
         cancel = new JButton("Cancel");
         input = new JTextField();
 
-        frame.setLayout(new BorderLayout());
-        frame.setSize(400, 80);
+        frame.setLayout(new BorderLayout(10, 10));
+        frame.setSize(400, 100);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
