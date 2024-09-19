@@ -1,35 +1,43 @@
-package de.dhbw.java.exercise.ui.event;
+package de.dhbw.java.solution.ui.event;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-public class BMICalculator implements ActionListener { //ToDo: Aufgabe noch nicht erledigt!
-
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+/**
+ * Part of lectures on 'Programming in Java'. Baden-Wuerttemberg
+ * Cooperative State University.
+ *
+ * (C) 2016-2018 by W. Geiger, T. Schlachter, C. Schmitt, W. Suess
+ *
+ * @author DHBW lecturer
+ * @version 1.1
+ */
+public class BMICalculator implements ActionListener {
     private JTextField weightField = new JTextField( 10 );
     private JTextField heightField = new JTextField( 10 );
     private JTextField bmiField = new JTextField( 15 );
     private JTextField messageField = new JTextField( 20 );
     private JRadioButton rbMale = new JRadioButton( "male", true );
     private JRadioButton rbFemale = new JRadioButton( "female", false );
-
     public BMICalculator() {
-        JFrame frame = new JFrame("BMICalculator");
-        frame.setLayout(new GridLayout(6, 1));
-
+        JFrame frame = new JFrame( "BMI Calculator" );
+        frame.setLayout( new GridLayout( 6, 1 ) );
         JPanel weightPanel = new JPanel();
         JPanel heightPanel = new JPanel();
         JPanel sexPanel = new JPanel();
         JPanel calcBtnPanel = new JPanel();
         JPanel bmiPanel = new JPanel();
         JPanel messagePanel = new JPanel();
-
-
         ButtonGroup radioButtonGroup = new ButtonGroup();
         radioButtonGroup.add( this.rbMale );
         radioButtonGroup.add( this.rbFemale );
-
         weightPanel.add( new JLabel( "Weight [kg]:" ) );
         weightPanel.add( this.weightField );
         heightPanel.add( new JLabel( "Body height [m]" ) );
@@ -37,7 +45,7 @@ public class BMICalculator implements ActionListener { //ToDo: Aufgabe noch nich
         sexPanel.add( this.rbMale );
         sexPanel.add( this.rbFemale );
         JButton calcBtn = new JButton( "Calculate" );
-        calcBtn.addActionListener(this );
+        calcBtn.addActionListener( this );
         calcBtnPanel.add( calcBtn );
         bmiPanel.add( new JLabel( "BMI:" ) );
         bmiPanel.add( this.bmiField );
@@ -52,7 +60,6 @@ public class BMICalculator implements ActionListener { //ToDo: Aufgabe noch nich
         frame.pack();
         frame.setVisible( true );
     }
-
     @Override
     public void actionPerformed( ActionEvent e ) {
         try {
@@ -66,7 +73,6 @@ public class BMICalculator implements ActionListener { //ToDo: Aufgabe noch nich
             this.bmiField.setText( "Bad input" );
         }
     }
-
     public String getBMIType( boolean male, double bmi ) {
         String erg;
         if ( male ) {
@@ -99,5 +105,4 @@ public class BMICalculator implements ActionListener { //ToDo: Aufgabe noch nich
     public static void main( String[] args ) {
         new BMICalculator();
     }
-
 }
