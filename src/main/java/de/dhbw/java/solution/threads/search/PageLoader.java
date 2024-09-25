@@ -39,7 +39,7 @@ public class PageLoader implements Runnable {
     }
     @Override
     public void run() {
-        this.content =
-                ReadURLExample.getStringContentFromUrl( this.url, PageLoader.ENCODING );
+        //this.content =
+                //ReadURLExample.getStringContentFromUrl( this.url, PageLoader.ENCODING );
     }
 }
